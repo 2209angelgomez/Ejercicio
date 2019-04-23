@@ -7,7 +7,7 @@ namespace Ejercicio
         static void Main(string[] args)
         {
 
-          //Mariana saca un credito po 17000000 en el banco bbva, con una tasa
+          //Mariana saca un credito poR 17000000 en el banco bbva, con una tasa
           //de interes del 2% mensual durante 1 año. Mariana debe camcelar el  credito dentro de los
           //primeros 5 dias de cada mes, por cada día transcorrudio se aumenta el interes
           //en un 0,02%. El programa debe pedir a Mariana la fecha de consignacion
@@ -21,19 +21,21 @@ namespace Ejercicio
             var fecha = new DateTime(2018,8,30);
             var fechaPago = new DateTime(2018,9,30);
             var dias = fecha.Subtract(fechaPago).Days;
+            var vaTotal = valorInteres * 0.002;
 
             Console.WriteLine("Ingrese la fecha de consignación (MM/dd/yyyy)");
             fechaPago = Convert.ToDateTime( Console.ReadLine());
             
             if (dias < 5)
             {
-                Console.WriteLine("Su valor a consignar es de ");
+                Console.WriteLine($"Su valor a consignar es de  { valorInteres} " );
             }
-            else
+            else 
             {
-                Console.WriteLine("gola");
+                Console.WriteLine($"Su valor a consignar es de  { vaTotal}  ");
             }
 
+           
 
         }
     }
